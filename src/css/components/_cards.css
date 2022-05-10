@@ -1,0 +1,150 @@
+.pokemon_card {
+    display: none;
+    margin-top: 5em;
+    width: 18.75rem;
+    perspective: 1000px;
+    height: 18.75rem;
+    padding: 15px;
+    position: relative;
+
+}
+
+.pokemon_card_front, .pokemon_card_back {
+    position: absolute;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.pokemon_card_back {
+    transform: rotateX(180deg);
+}
+
+.stats {
+    margin: 0.5em 2.5%;
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+    height: 85%;
+}
+
+.stat_box {
+    background-color: var(--txt-color);
+    width: 0.5em;
+    height: 1.5em;
+    float: left;
+    margin-right: 1em;
+}
+
+.stats tr:nth-child(even) {
+    background: linear-gradient(to right, #ffffff33, #00000000);
+}
+
+.stats tr th {
+    font-size: 0.75em;
+    text-align: left;
+}
+
+.total {
+    padding-left: 1.5em;
+}
+
+.pokemon_card_inner {
+    border-radius: 20px;
+    box-shadow: 0 1px 5px #111;
+    width: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.pokemon_card:hover .pokemon_card_inner{
+    transform: rotateX(180deg);
+}
+
+.pokemon_card .info_front {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.info {
+    flex-grow: 1;
+    margin-left: 1em;
+}
+
+.types {
+    width: 7em;
+}
+
+.types .type {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0.9em 0 0 0.5em;
+    border: 1px solid #00000069;
+    border-radius: 5px;
+    color: #00000099;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.basic_info {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    padding-bottom: 1em;
+}
+
+.img-container {
+    width: 2em;
+    margin-left: -7em;
+    margin-top: 2em;
+}
+
+.sprite {
+    padding: 0.1em;
+}
+
+.sprite_and_name {
+    margin-top: -1em;
+    margin-left: -0.1em;
+}
+
+.sprite_container img {
+   display: flex;
+   margin: -1em 0 0 -0.5em;
+}
+
+.basic_info .name {
+    font-size: 1.5em;
+    color: var(--txt-color);
+    margin: 1em 0 0 0.5em;
+}
+
+.basic_info .number {
+    font-size: 1em;
+    color: var(--txt-color);
+}
+
+.pokemon_card .img-container {
+    width: 130px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.favorite img{
+    width: 30px;
+    height: auto;
+}
+
+
+
+
+

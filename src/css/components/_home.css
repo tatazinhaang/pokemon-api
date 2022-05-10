@@ -1,0 +1,42 @@
+.home {
+   height: 100vh;
+   width: 100%;
+   padding: 5rem;
+   background-image: url('../../img/bg-red.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.home-pokemon {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo-pokemon {
+   width: 40rem;
+   margin-top: -4rem;
+}
+
+.home h1 {
+   font-size: 5rem;
+   font-family: var(--font-title);
+   font-weight: 600;
+   color: var(--text-color);
+}
+
+.home p {
+   color: var(--text-color);
+   font-weight: 400;
+   font-size: 1.3rem;
+   margin-top: 0.9rem;
+}
+
+.home .pokeball {
+   width: 45%;
+   margin-top: 1rem;
+}
+   
+   
+
+
