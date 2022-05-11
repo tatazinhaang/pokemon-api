@@ -5,8 +5,11 @@ const generation_container = document.getElementById('generation_container');
 const pokedex_name = document.getElementById('pokedex_name');
 const loading = document.getElementById('loading');
 
+const starYellow = 'src/img/star-yellow.png';
+const imgStar = 'src/img/star.png';
 
-const card_anim_speed = 300;
+
+const card_anim_speed = 3000;
 
 let timeout = null;
 let generations = null;
@@ -82,7 +85,7 @@ const getGenerations = async (url) => {
     } catch(e) {errorShake(e);}
 }
 
-// Background color
+
 const type_colors = {
     normal:'#a8a878',
     fire:'#f08030',
@@ -317,13 +320,6 @@ function createPokemonCard(pokemon) {
             <th class='total'>TOTAL</th>
             <th>${total_stats}</th>
             <th></th>
-            <th>
-                  <a class='favorite' href='#'>
-                    <img src='src/img/star.png'>
-                </a>
-               
-                </a>
-            </th>
         </tr>
     </table>
     `;
@@ -351,15 +347,15 @@ function createPokemonCard(pokemon) {
                     <img src='${pokemon['sprites']['other']['official-artwork']['front_default']}'>
                 </div>
             </div>
-            <div class='pokemon_card_back'>
+            <div class='pokemon_card_back' onclick="addFavorite(${pokemon.id})">
                 ${stats_innerHTML}
+                <img class='img-favorite' src= "${verifyFavorite(pokemon.id) ? starYellow : imgStar }">
             </div>
         </div>
     `;
 
     pokemon_card.innerHTML = pokemon_innerHTML;
-    
-    // Cor background gradiente
+
     const pokemon_card_front = Array.from(Array.from(pokemon_card.children)[0].children)[0];
     const pokemon_card_back = Array.from(Array.from(pokemon_card.children)[0].children)[1];
     if (types.length > 1) {
@@ -389,7 +385,7 @@ function createPokemonCard(pokemon) {
     addMoveUpAnim(pokemon_card);
 }
 
-// Mobile
+
 function flipCard(card) {
     if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         if (card.style.transform == 'rotateX(180deg)') {
@@ -400,9 +396,8 @@ function flipCard(card) {
     }
 }
 
-
 search_bar.value = '';
-
 
 getGenerations('https://pokeapi.co/api/v2/generation/');
 getAllPokemon(`https://pokeapi.co/api/v2/pokemon/?limit=151&offset=0`, 1);
+

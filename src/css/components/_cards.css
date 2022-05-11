@@ -20,6 +20,18 @@
 
 .pokemon_card_back {
     transform: rotateX(180deg);
+    cursor: pointer;
+}
+
+.img-favorite {
+    width: 30px;
+    height: 30px;
+    margin: 190px 0 0 -80px;
+}
+
+.img-favorite:hover::after,
+.img-favorite.fav:after {
+    width: 40px;
 }
 
 .stats {
@@ -55,7 +67,7 @@
     border-radius: 20px;
     box-shadow: 0 1px 5px #111;
     width: 100%;
-    transition: transform 0.8s;
+    transition: transform 2s;
     transform-style: preserve-3d;
 }
 
@@ -137,12 +149,6 @@
     justify-content: center;
     margin-top: 80px;
 }
-
-.favorite img{
-    width: 30px;
-    height: auto;
-}
-
 
 
 

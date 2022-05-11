@@ -10,6 +10,12 @@
 body {
     background-color: var(--body-color);
     font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
+#loading {
+    text-align: center;
+    display: block;
+    position: absolute;
+}
 

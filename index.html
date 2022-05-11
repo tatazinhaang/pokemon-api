@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+  <div id="loading"><img src="src/img/loading.gif" alt="Loading"></div>
     <section class="home">
         <div class="home-pokemon">
             <a href="#"><img src="src/img/logo.svg" alt="Logo Pokemon" class="logo-pokemon"></a>
@@ -27,9 +28,14 @@
       <span class="search-error" id="search_error"></span>
     </div>
     <div class="loading" id="loading"></div>
-    <div class="pokemon-container" id="pokemon_container"></div>
-      
+    <div class="pokemon-container" id="pokemon_container">
+      <div class="pokemon_card_back"></div> 
+    </div>
+   
+    </div>
+     
     <script src="src/js/main.js"></script>
+    <script src="src/js/storage.js"></script>
 </body>
 </html>
 
