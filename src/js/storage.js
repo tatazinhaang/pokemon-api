@@ -1,4 +1,4 @@
-const starFavorite = JSON.parse(localStorage.getItem('favorite', '[]'));
+const starFavorite = JSON.parse(localStorage.getItem('favorite'));
 
 function getItem() {
     if(!starFavorite) {
@@ -10,7 +10,7 @@ function getItem() {
 function addFavorite(imgElement, id) {
     imgElement.className = imgElement.className === "star" ? "star-active" : "star";
 
-    localStorage.setItem( JSON.stringify([1,2,3]));
+    localStorage.setItem( JSON.stringify([1,2,3] ));
 
     const star = JSON.parse(localStorage.getItem("favorite", "[]"));
 

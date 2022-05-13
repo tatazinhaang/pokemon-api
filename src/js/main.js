@@ -5,10 +5,6 @@ const generation_container = document.getElementById('generation_container');
 const pokedex_name = document.getElementById('pokedex_name');
 const loading = document.getElementById('loading');
 
-const starYellow = 'src/img/star-yellow.png';
-const imgStar = 'src/img/star.png';
-
-
 const card_anim_speed = 1000;
 
 let timeout = null;
