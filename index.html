@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="stylesheet" href="src/css/style.css">
-</head>
-<body>
-  <div id="loading"><img src="src/img/loading.gif" alt="Loading"></div>
-    <section class="home">
+  </head>
+    <body>
+      <section class="home">
         <div class="home-pokemon">
-            <a href="#"><img src="src/img/logo.svg" alt="Logo Pokemon" class="logo-pokemon"></a>
-            <h1>Pokedex</h1>
-            <p>Come have fun!</p>
-            <img src="src/img/pokeball-red.png" alt="Pokeball" class="pokeball">
+          <a href="#"><img src="src/img/logo.svg" alt="Logo Pokemon" class="logo-pokemon"></a>
+          <h1>Pokedex</h1>
+          <p>Come have fun!</p>
+          <img src="src/img/pokeball-red.png" alt="Pokeball" class="pokeball">
         </div>
-    </section>
-
-    <div class="pokedex-name" id="pokedex_name">
-      Kanto Pokédex
-    </div>
-    <div class="search" id="search_and_generation">
-      <input class="search-bar" id="search_bar" type="search" placeholder="Search..." onkeyup="searchPokemon()">
-      <span class="generation-title" id="generation_title">Generation</span>
-      <div class="generation-container" id="generation_container"></div>
-      <span class="search-error" id="search_error"></span>
-    </div>
-    <div class="loading" id="loading"></div>
-    <div class="pokemon-container" id="pokemon_container">
-      <div class="pokemon_card_back"></div> 
-    </div>
-   
-    </div>
-     
-    <script src="src/js/main.js"></script>
-    <script src="src/js/storage.js"></script>
-</body>
-</html>
+      </section>
+    
+      <div class="pokedex-name" id="pokedex_name">
+          Kanto Pokédex
+      </div>
+      <div class="search" id="search_and_generation">
+        <input class="search-bar" id="search_bar" type="search" placeholder="Search..." onkeyup="searchPokemon()">
+        <span class="generation-title" id="generation_title">Generation</span>
+        <div class="generation-container" id="generation_container"></div>
+        <span class="search-error" id="search_error"></span>
+      </div>
+      <div id="loading"><img src="src/img/loading.gif.gif" alt="Loading"></div>
+      <div class="pokemon-container" id="pokemon_container">
+       
+      <script src="src/js/main.js"></script>
+      <script src="src/js/storage.js"></script>
+    </body>
+  </html>
 

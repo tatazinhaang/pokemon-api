@@ -9,7 +9,7 @@ const starYellow = 'src/img/star-yellow.png';
 const imgStar = 'src/img/star.png';
 
 
-const card_anim_speed = 3000;
+const card_anim_speed = 1000;
 
 let timeout = null;
 let generations = null;
@@ -23,7 +23,6 @@ let anim_timeouts = [];
 const changeGeneration = async (url, new_generation, button_id) => {
     current_generation = new_generation;
 
-    
     const children = Array.from(generation_container.children);
     children.forEach(child => {
         const button = Array.from(child.children)[0];
@@ -56,7 +55,9 @@ const changeGeneration = async (url, new_generation, button_id) => {
 
             getAllPokemon(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`, current_generation);
         }
-    } catch(e) {errorShake(e);}
+    } catch(e) {
+        errorShake(e);
+    }
 }
 const getGenerations = async (url) => {
     try {
@@ -132,6 +133,7 @@ const getAllPokemon = async (url, generation) => {
     } catch(e) {errorShake(e);}
 
     loading.style.display = 'none';
+    
 }
 
 getPokemon = async (id) => {
@@ -253,7 +255,6 @@ function createPokemonCard(pokemon) {
     const male_index = pokemon.species.name.search('-m')
     let name = '';
     
-    
     if (female_index != -1 || male_index != -1) {
     
         if (female_index != -1) {
@@ -272,56 +273,55 @@ function createPokemonCard(pokemon) {
         sprite = `src/img/unknown.png`;
     }
 
-    
     let total_stats = 0;
     pokemon['stats'].forEach(stat => {
         total_stats += stat.base_stat;
     });
 
     let stats_innerHTML = `
-    <table class='stats'>
-        <tr>
-            <th>
-                <div class='stat_box hp'></div>
-                HP
-            </th>
-            <th>${pokemon['stats'][0].base_stat}</th>
-            <th>
-                <div class='stat_box sp_atk'></div>
-                SP. ATK
-            </th>
-            <th>${pokemon['stats'][3].base_stat}</th>
-        </tr>
-        <tr>
-            <th>
-                <div class='stat_box atk'></div>
-                ATK
-            </th>
-            <th>${pokemon['stats'][1].base_stat}</th>
-            <th>
-                <div class='stat_box sp_def'></div>
-                SP. DEF
-            </th>
-            <th>${pokemon['stats'][4].base_stat}</th>
-        </tr>
-        <tr>
-            <th>
-                <div class='stat_box def'></div>
-                DEF
-            </th>
-            <th>${pokemon['stats'][2].base_stat}</th>
-            <th>
-                <div class='stat_box speed'></div>
-                SPEED
-            </th>
-            <th>${pokemon['stats'][5].base_stat}</th>
-        </tr>
-        <tr>
-            <th class='total'>TOTAL</th>
-            <th>${total_stats}</th>
-            <th></th>
-        </tr>
-    </table>
+        <table class='stats'>
+            <tr>
+                <th>
+                    <div class='stat_box hp'></div>
+                    HP
+                </th>
+                <th>${pokemon['stats'][0].base_stat}</th>
+                <th>
+                    <div class='stat_box sp_atk'></div>
+                    SP. ATK
+                </th>
+                <th>${pokemon['stats'][3].base_stat}</th>
+            </tr>
+            <tr>
+                <th>
+                    <div class='stat_box atk'></div>
+                    ATK
+                </th>
+                <th>${pokemon['stats'][1].base_stat}</th>
+                <th>
+                    <div class='stat_box sp_def'></div>
+                    SP. DEF
+                </th>
+                <th>${pokemon['stats'][4].base_stat}</th>
+            </tr>
+            <tr>
+                <th>
+                    <div class='stat_box def'></div>
+                    DEF
+                </th>
+                <th>${pokemon['stats'][2].base_stat}</th>
+                <th>
+                    <div class='stat_box speed'></div>
+                    SPEED
+                </th>
+                <th>${pokemon['stats'][5].base_stat}</th>
+            </tr>
+            <tr>
+                <th class='total'>TOTAL</th>
+                <th>${total_stats}</th>
+                <th></th>
+            </tr>
+        </table>
     `;
 
     const pokemon_innerHTML = `
@@ -349,7 +349,7 @@ function createPokemonCard(pokemon) {
             </div>
             <div class='pokemon_card_back' onclick="addFavorite(${pokemon.id})">
                 ${stats_innerHTML}
-                <img class='img-favorite' src= "${verifyFavorite(pokemon.id) ? starYellow : imgStar }">
+                <img class='img-favorite' src="${verifyFavorite(pokemon.id) ? starYellow : imgStar  }">
             </div>
         </div>
     `;
@@ -384,7 +384,6 @@ function createPokemonCard(pokemon) {
 
     addMoveUpAnim(pokemon_card);
 }
-
 
 function flipCard(card) {
     if(/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

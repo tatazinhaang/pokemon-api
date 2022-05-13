@@ -1,5 +1,6 @@
 const starFavorite = JSON.parse(localStorage.getItem('favorite'));
 
+
 function getItem() {
     if(!starFavorite) {
         localStorage.setItem('favorite', '[]');
@@ -11,8 +12,9 @@ function addFavorite(id) {
     if(listFavorite) {
     listFavorite.push(id);
     localStorage.setItem('favorite', JSON.stringify(listFavorite));
-    
-    window.location.reload()
+
+
+    changeGeneration();
 
     }
 }
@@ -23,5 +25,10 @@ function verifyFavorite(id) {
     else return false;
 }
 
+function toggleFavorite(e) {
+    console.log(e)
+}
+
 getItem();
+
 
