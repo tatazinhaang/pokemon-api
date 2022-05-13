@@ -101,10 +101,63 @@
     }
 }
 
+@media(max-width: 390px) {
+    .logo-pokemon {
+        width: 15em;
+        margin-top: -3em;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    .home p {
+        font-size: 1.2em;
+    }
+
+    .home .pokeball {
+        width: 22rem;
+        margin-top: 5rem;
+    }
+
+    .pokedex-name {
+        font-size: 1.8rem;
+        margin-left: -0.5rem;
+    }
+
+    .search {
+        margin: 0 auto;
+    }
+
+    .search input[type=search] {
+        width: 60vw;
+    }
+
+    .search .generation-container .generation_button_container button {
+        font-size: 1.2rem;
+        margin-left: -0.5rem;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pokemon_card {
+        width: 17em;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media(max-width: 320px) {
     .logo-pokemon {
         width: 15em;
-       margin-top: -3em;
+        margin-top: -3em;
     }
 
     .home h1 {
