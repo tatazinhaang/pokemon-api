@@ -150,6 +150,24 @@
     margin-top: 80px;
 }
 
+.star {
+    width: 30px;
+    height: 30px;
+    background-image: url("/src/img/star.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 190px 0 0 -80px;
+}
+
+.star-active {
+    width: 30px;
+    height: 30px;
+    background-image: url("/src/img/star-yellow.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 190px 0 0 -80px;
+}
+
 
 
 

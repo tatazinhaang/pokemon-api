@@ -1,0 +1,24 @@
+@media(max-width: 640px) {
+    .logo-pokemon {
+        width: 25rem;
+        margin: 0 1rem 0 0;
+    }
+
+    .home h1 {
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+
+    .home p {
+        font-size: 1.5rem;
+    }
+
+    .home .pokeball {
+        width: 100%;
+        margin-top: 2rem;
+    }
+       
+    .search input[type=search] {
+        width: 70vw;
+    }
+}

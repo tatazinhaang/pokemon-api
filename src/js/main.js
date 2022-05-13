@@ -349,7 +349,7 @@ function createPokemonCard(pokemon) {
             </div>
             <div class='pokemon_card_back' onclick="addFavorite(${pokemon.id})">
                 ${stats_innerHTML}
-                <img class='img-favorite' src="${verifyFavorite(pokemon.id) ? starYellow : imgStar  }">
+                <div onclick="addFavorite(this, ${pokemon.id})" class="${verifyFavorite(pokemon.id) ? "star-active" : "star"  }"> </div>
             </div>
         </div>
     `;

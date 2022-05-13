@@ -1,0 +1,22 @@
+footer {
+    padding: 1rem 3rem;
+    background-color: #8b481b42;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info h3 {
+    font-size: 1.5rem;
+    color: #8d8282f3;
+    font-weight: 600;
+}
+
+.footer-info p {
+    font-size: 1.2rem;
+    color: #8d8282f3;
+    font-weight: 600;
+}
